@@ -1,0 +1,31 @@
+{
+  "name": "Mentorma",
+  "version": "1.0.0",
+  "slug": "mentorma",
+  "orientation": "portrait",
+  "userInterfaceStyle": "light",
+  "scheme": "mentorma",
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "android": {
+    "package": "com.mentorma.app",
+    "versionCode": 1,
+    "adaptiveIcon": {
+      "backgroundColor": "#0F172A"
+    }
+  },
+  "ios": {
+    "bundleIdentifier": "com.mentorma.app"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "mentorma-project-id"
+    }
+  },
+  "plugins": [],
+  "experiments": {
+    "typedRoutes": false,
+    "tsconfigPaths": false
+  }
+}

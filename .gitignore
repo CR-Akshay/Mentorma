@@ -1,0 +1,45 @@
+# Mentorma APK Build Notes
+
+## Prerequisites
+
+Install Node.js 18+ and the Expo CLI toolchain on a machine that has Android SDK support.
+
+```bash
+npm install -g eas-cli
+npm install -g expo-cli
+```
+
+Then in this project:
+
+```bash
+npm install
+npx expo install
+```
+
+## Local Android build
+
+```bash
+npx expo run:android
+```
+
+This generates an Android app and is the usual step before building an APK.
+
+## APK build through Expo EAS
+
+```bash
+npx eas-cli build -p android --profile preview
+```
+
+This produces a build artifact suitable for APK installation or internal distribution.
+
+## Production release
+
+```bash
+npx eas-cli build -p android --profile production
+```
+
+## Notes
+
+This repository includes the app shell and product MVP assets, but the actual APK file must be generated from a local machine or CI environment with Android SDK / Gradle / EAS build access enabled.
+
+This environment can prepare the project, but cannot directly install Android toolchains or access the device SDK needed to finalize the signed APK binary.
